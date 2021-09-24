@@ -1,10 +1,15 @@
 import React from "react";
+import { Header } from "./components";
+import { GlobalStyles } from "./styles/globalStyles";
 
 function App() {
   return (
-    <div className="App">
-      <h2>Binge Flix</h2>
-    </div>
+    <>
+      <GlobalStyles />
+      <div className="App">
+        <Header />
+      </div>
+    </>
   );
 }
 
