@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         --accent-color-primary: #e50914;
         --accent-color-secondary: #b81d24; //b20710
         --fg-bold: #d3cecc;
-        --fg-light: #d1d5db;
+        --fg-light: #f1f2f4;
         --fg-lighter: #ffffffb3;
         --fg-lightest: #808080;
         --bg-dark: #141414;
