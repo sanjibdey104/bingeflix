@@ -1,15 +1,15 @@
 import React from "react";
-import { Header } from "./components";
+import { Header, Layout } from "./components";
 import { GlobalStyles } from "./styles/globalStyles";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <GlobalStyles />
-      <div className="App">
+      <Layout>
         <Header />
-      </div>
-    </>
+      </Layout>
+    </div>
   );
 }
 

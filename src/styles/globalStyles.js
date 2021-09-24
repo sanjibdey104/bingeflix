@@ -53,18 +53,4 @@ export const GlobalStyles = createGlobalStyle`
         background-color: transparent;
         cursor: pointer;
     }
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1100px;
-        min-height: 100vh;
-        padding: 1rem;
-        position: relative;
-        font-family: var(--font-primary);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 3rem;
-
-    }
 `;
