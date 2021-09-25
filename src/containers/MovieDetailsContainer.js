@@ -14,20 +14,19 @@ const MovieDetailsContainer = () => {
   const movieDetails = useSelector((state) => state.movie);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchMovieDetails = async () => {
-    const res = await axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${movieId}?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
-      )
-      .catch((err) => console.log(err));
-    dispatch(selectedMovie(res.data));
-    setIsLoading(false);
-  };
-
   useEffect(() => {
+    const fetchMovieDetails = async () => {
+      const res = await axios
+        .get(
+          `https://api.themoviedb.org/3/movie/${movieId}?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
+        )
+        .catch((err) => console.log(err));
+      dispatch(selectedMovie(res.data));
+      setIsLoading(false);
+    };
     fetchMovieDetails();
     return () => dispatch(removeSelectedMovie());
-  }, [movieId, fetchMovieDetails]);
+  }, [movieId, dispatch]);
 
   return (
     <>

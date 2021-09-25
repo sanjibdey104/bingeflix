@@ -8,18 +8,17 @@ const MovieListContainer = () => {
   const movies = useSelector((state) => state.allMovies.movies);
   const dispatch = useDispatch();
 
-  const fetchMovies = async () => {
-    const res = await axios
-      .get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US&include_adult=false&include_video=false&page=1&with_genres=53&with_watch_monetization_types=flatrate"
-      )
-      .catch((err) => console.log(err));
-    dispatch(setMovies(res.data.results));
-  };
-
   useEffect(() => {
+    const fetchMovies = async () => {
+      const res = await axios
+        .get(
+          "https://api.themoviedb.org/3/discover/movie?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US&include_adult=false&include_video=false&page=1&with_genres=53&with_watch_monetization_types=flatrate"
+        )
+        .catch((err) => console.log(err));
+      dispatch(setMovies(res.data.results));
+    };
     fetchMovies();
-  }, [fetchMovies]);
+  }, [dispatch]);
 
   return <MovieList movies={movies} />;
 };
