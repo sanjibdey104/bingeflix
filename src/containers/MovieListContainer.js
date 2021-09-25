@@ -19,7 +19,7 @@ const MovieListContainer = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, []);
+  }, [fetchMovies]);
 
   return <MovieList movies={movies} />;
 };

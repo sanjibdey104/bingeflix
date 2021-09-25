@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Header, Layout, Billboard } from "./components";
+import { Home, Header, Layout } from "./components";
 import { GlobalStyles } from "./styles/globalStyles";
 import {
   BrowserRouter as Router,
