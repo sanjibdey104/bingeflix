@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { MovieList } from "../components";
 import { setMovies } from "../redux/actions/movieAction";
 
-const MovieList = () => {
-  const movies = useSelector((state) => state.allMovies);
+const MovieListContainer = () => {
+  const movies = useSelector((state) => state.allMovies.movies);
   const dispatch = useDispatch();
 
   const fetchMovies = async () => {
@@ -18,13 +19,14 @@ const MovieList = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, [fetchMovies]);
+  }, []);
 
   return (
     <div>
       <h2>Movie List</h2>
+      <MovieList movies={movies && movies} />
     </div>
   );
 };
 
-export default MovieList;
+export default MovieListContainer;

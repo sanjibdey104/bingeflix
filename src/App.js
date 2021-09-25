@@ -1,6 +1,5 @@
 import React from "react";
-import { Header, Layout } from "./components";
-import Billboard from "./components/Billboard/Billboard";
+import { Home, Header, Layout, Billboard } from "./components";
 import { GlobalStyles } from "./styles/globalStyles";
 import {
   BrowserRouter as Router,
@@ -8,9 +7,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import MovieList from "./containers/MovieList";
-import MovieDetails from "./containers/MovieDetails";
-import { Home } from "./components/Home/Home";
+import MovieListContainer from "./containers/MovieListContainer";
 
 function App() {
   return (
@@ -25,8 +22,8 @@ function App() {
               <Redirect to="/home" />
             </Route>
             <Route path="/home" component={Home} />
-            <Route path="/movies" component={MovieList} />
-            <Route path="/movie/:movieId" component={MovieDetails} />
+            <Route path="/movies" component={MovieListContainer} />
+            {/* <Route path="/movie/:movieId" component={MovieDetailsC} /> */}
             <Route>404 page not found</Route>
           </Switch>
         </Router>

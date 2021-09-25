@@ -12,6 +12,12 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: space-around;
   gap: 1.5rem;
+
+  .selected {
+    li {
+      color: var(--fg-light);
+    }
+  }
 `;
 
 export const NavItem = styled.li`

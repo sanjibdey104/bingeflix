@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieDetails = () => {
+const MovieDetailsContainer = () => {
   return (
     <div>
       <h3>Fight Club</h3>
@@ -12,4 +12,4 @@ const MovieDetails = () => {
   );
 };
 
-export default MovieDetails;
+export default MovieDetailsContainer;
