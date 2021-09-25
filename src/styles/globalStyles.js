@@ -11,6 +11,8 @@ export const GlobalStyles = createGlobalStyle`
         --fg-lighter: #ffffffb3;
         --fg-lightest: #808080;
         --bg-dark: #141414;
+        --bg-light: #ffffff;
+        --bg-gray: #808080;
     }
     html {
         box-sizing: border-box;

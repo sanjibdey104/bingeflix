@@ -8,6 +8,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import MovieListContainer from "./containers/MovieListContainer";
+import MovieDetailsContainer from "./containers/MovieDetailsContainer";
 
 function App() {
   return (
@@ -16,14 +17,13 @@ function App() {
       <Layout>
         <Router>
           <Header />
-          <Billboard />
           <Switch>
             <Route path="/" exact>
               <Redirect to="/home" />
             </Route>
             <Route path="/home" component={Home} />
-            <Route path="/movies" component={MovieListContainer} />
-            {/* <Route path="/movie/:movieId" component={MovieDetailsC} /> */}
+            <Route exact path="/movies" component={MovieListContainer} />
+            <Route path="/movies/:movieId" component={MovieDetailsContainer} />
             <Route>404 page not found</Route>
           </Switch>
         </Router>

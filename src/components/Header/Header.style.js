@@ -5,8 +5,9 @@ export const StyledHeader = styled.header`
   display: flex;
   gap: 2rem;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 4rem;
   z-index: 100;
+  height: 5rem;
 
   position: fixed;
   top: 0;

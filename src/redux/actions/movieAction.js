@@ -7,7 +7,7 @@ export const setMovies = (movies) => {
   };
 };
 
-export const selectedMovies = (movie) => {
+export const selectedMovie = (movie) => {
   return {
     type: ActionTypes.SELECTED_MOVIE,
     payload: movie,

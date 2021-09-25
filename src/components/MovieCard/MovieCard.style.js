@@ -52,7 +52,7 @@ export const StyledMovieCard = styled.li`
     padding: 0.5rem;
   }
 
-  &:hover {
+  /* &:hover {
     width: 18rem;
     height: 18rem;
     box-shadow: 0 0 12px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 0, 0, 0.5);
@@ -68,5 +68,5 @@ export const StyledMovieCard = styled.li`
         display: none;
       }
     }
-  }
+  } */
 `;

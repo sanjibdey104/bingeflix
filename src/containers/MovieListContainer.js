@@ -21,12 +21,7 @@ const MovieListContainer = () => {
     fetchMovies();
   }, []);
 
-  return (
-    <div>
-      <h2>Movie List</h2>
-      <MovieList movies={movies && movies} />
-    </div>
-  );
+  return <MovieList movies={movies} />;
 };
 
 export default MovieListContainer;

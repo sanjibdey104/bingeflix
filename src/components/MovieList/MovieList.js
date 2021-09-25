@@ -6,7 +6,7 @@ const MovieList = ({ movies }) => {
   return (
     <StyledMovieList>
       {movies.map((movie) => (
-        <MovieCard movieBrief={movie} />
+        <MovieCard movieBrief={movie} key={movie.id} />
       ))}
     </StyledMovieList>
   );

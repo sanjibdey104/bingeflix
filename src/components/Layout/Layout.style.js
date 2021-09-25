@@ -7,4 +7,5 @@ export const StyledLayout = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  padding-top: 7.5rem;
 `;
