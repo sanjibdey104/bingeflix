@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledLogo = styled.img`
-  width: clamp(7.5rem, 12vw, 12rem);
+  width: clamp(6.5rem, 12vw, 12rem);
 `;
 
 export const Logo = () => {

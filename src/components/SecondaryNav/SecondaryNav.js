@@ -1,28 +1,26 @@
 import React from "react";
 import { StyledSecondaryNav, SecondaryNavItem } from "./SecondaryNav.style";
 
-import { FaSearch, FaSlidersH, FaCaretDown, FaUser } from "react-icons/fa";
+import { FaSearch, FaBell, FaCaretDown } from "react-icons/fa";
 import { AiOutlineGift } from "react-icons/ai";
-import { BiBell } from "react-icons/bi";
 
 const SecondaryNav = () => {
   return (
     <StyledSecondaryNav>
       <SecondaryNavItem>
-        <FaSearch />
+        <FaSearch id="search-icon" />
       </SecondaryNavItem>
-      <SecondaryNavItem>
-        <BiBell />
+      <SecondaryNavItem className="gifts">
+        <AiOutlineGift id="gift" />
       </SecondaryNavItem>
-      <SecondaryNavItem>
-        <AiOutlineGift />
+      <SecondaryNavItem className="notification">
+        <FaBell />
       </SecondaryNavItem>
-      <SecondaryNavItem>
-        <FaUser />
-        <FaCaretDown id="caret-down" />
-      </SecondaryNavItem>
-      <SecondaryNavItem>
-        <FaSlidersH />
+      <SecondaryNavItem data-tooltip="profile">
+        <img
+          src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"
+          alt="user portrait"
+        />
         <FaCaretDown id="caret-down" />
       </SecondaryNavItem>
     </StyledSecondaryNav>

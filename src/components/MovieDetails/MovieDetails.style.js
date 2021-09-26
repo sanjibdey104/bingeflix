@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const StyledMovieDetailsPage = styled.section`
   width: 100%;
-  margin: 0 auto;
-  height: 75vh;
-  padding-top: 7.5rem;
+  height: 80vh;
 
   &::after {
     content: "";
@@ -22,9 +20,9 @@ export const StyledMovieDetailsPage = styled.section`
 
   .wrapper {
     width: 100%;
-    margin: 0 auto;
     height: 100%;
     margin-left: 4rem;
+    margin-top: 7.5rem;
 
     color: var(--fg-lighter);
     font-size: 0.9rem;
@@ -54,7 +52,6 @@ export const StyledMovieDetailsPage = styled.section`
       img {
         height: 100%;
         width: 100%;
-        opacity: 0.85;
         object-fit: cover;
       }
     }
@@ -69,6 +66,7 @@ export const StyledMovieDetailsPage = styled.section`
 
     .overview {
       width: 30rem;
+      max-width: 100%;
     }
 
     .controls {
@@ -123,6 +121,53 @@ export const StyledMovieDetailsPage = styled.section`
       display: flex;
       flex-direction: column;
       gap: 0.2rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &::after {
+      display: none;
+    }
+
+    .wrapper {
+      margin-left: 0;
+      padding: 0.75rem;
+
+      .overview {
+        width: 100%;
+      }
+
+      .backdrop-image {
+        position: static;
+        width: 100%;
+      }
+
+      .controls {
+        justify-content: space-around;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    &::after {
+      display: none;
+    }
+    width: 85%;
+    margin: 0 auto;
+
+    .wrapper {
+      margin-left: 0;
+      padding: 0.75rem;
+      height: initial;
+
+      .overview {
+        width: 100%;
+      }
+
+      .backdrop-image {
+        position: static;
+        width: 100%;
+      }
     }
   }
 `;

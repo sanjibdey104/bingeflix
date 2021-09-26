@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBillboard = styled.section`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   margin-bottom: 1rem;
 
   img {

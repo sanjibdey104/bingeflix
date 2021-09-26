@@ -30,4 +30,11 @@ export const StyledMovieList = styled.section`
       padding-right: 0.5rem;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .list-wrapper,
+    .category {
+      margin-left: 1rem;
+    }
+  }
 `;

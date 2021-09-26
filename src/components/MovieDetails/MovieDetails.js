@@ -26,9 +26,9 @@ const MovieDetails = ({ completeMovieDetails }) => {
     let result;
     if (runtime / 60 > 1) {
       let hours = runtime / 60;
-      let roundedHours = Math.round(hours);
-      let minutes = Math.round((hours - roundedHours) * 60);
-      result = `${roundedHours}h ${minutes}min`;
+      let flooredHours = Math.floor(hours);
+      let minutes = Math.round((hours - flooredHours) * 60);
+      result = `${flooredHours}h ${minutes}min`;
     } else result = `${runtime} min`;
     return result;
   };
@@ -37,18 +37,19 @@ const MovieDetails = ({ completeMovieDetails }) => {
   return (
     <StyledMovieDetailsPage>
       <div className="wrapper">
-        <h2 className="title">{original_title}</h2>
-        <div className="extra">
-          <p className="release-year">{releaseYear}</p>
-          <p className="runtime">{formattedRuntime}</p>
-          <p className="avg-rating">⭐{vote_average}</p>
-        </div>
         <div className="backdrop-image">
           <img
             src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
             alt={original_title}
           />
         </div>
+        <h2 className="title">{original_title}</h2>
+        <div className="extra">
+          <p className="release-year">{releaseYear}</p>
+          <p className="runtime">{formattedRuntime}</p>
+          <p className="avg-rating">⭐{vote_average}</p>
+        </div>
+
         <p className="overview">{overview}</p>
         <div className="controls">
           <button className="play">
