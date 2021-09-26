@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
 
-  background: linear-gradient(to top, transparent 10%, rgba(0, 0, 0, 0.5) 50%);
+  background: linear-gradient(to top, transparent 5%, rgba(0, 0, 0, 0.75) 70%);
 
   @media screen and (max-width: 800px) {
     padding: 0.75rem 1rem;

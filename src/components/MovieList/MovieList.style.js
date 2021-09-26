@@ -6,7 +6,7 @@ export const StyledMovieList = styled.section`
   gap: 0.75rem;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   .category {
     font-size: 1.2rem;

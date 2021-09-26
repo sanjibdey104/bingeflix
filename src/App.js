@@ -24,6 +24,9 @@ function App() {
             <Route path="/home" component={Home} />
             <Route exact path="/movies" component={MovieListContainer} />
             <Route path="/movies/:movieId" component={MovieDetailsContainer} />
+            <Route path="/tvshows" component={Home} />
+            <Route path="/new&popular" component={MovieListContainer} />
+            <Route path="/mylist" component={Home} />
             <Route>404 page not found</Route>
           </Switch>
         </Router>

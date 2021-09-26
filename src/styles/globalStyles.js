@@ -14,18 +14,22 @@ export const GlobalStyles = createGlobalStyle`
         --bg-light: #ffffff;
         --bg-gray: #737373;
     }
+
     html {
         box-sizing: border-box;
         font-size: 100%;
+        height: 100%;
     }
+
     *,*::before,*::after {
         box-sizing: inherit;
         margin: 0;
         padding: 0;
     }
+
     body {
         width: 100%;
-        height: 100vh;
+        min-height: 100%;
         
         line-height: 1.5;
         background-color: var(--bg-dark);

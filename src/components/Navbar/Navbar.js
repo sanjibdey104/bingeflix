@@ -20,7 +20,7 @@ const Navbar = () => {
       <NavList ref={navMenu}>
         {navItems.map((navItem, index) => (
           <NavLink
-            to={`/${navItem.toLowerCase()}`}
+            to={`/${navItem.split(" ").join("").toLowerCase()}`}
             key={index}
             activeClassName="selected"
           >

@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Billboard, MovieList } from "../components";
+import { MovieList } from "../components";
 import { setMovies } from "../redux/actions/movieAction";
+import FeaturedMovieContainer from "./FeaturedMovieContainer";
 
 const MovieListContainer = () => {
   const movieLists = useSelector((state) => state.allMovies.movies);
@@ -40,7 +41,7 @@ const MovieListContainer = () => {
 
   return (
     <>
-      <Billboard />
+      <FeaturedMovieContainer />
       {movieLists.map((movieList) => (
         <MovieList
           key={movieList.category.split(" ").join()}

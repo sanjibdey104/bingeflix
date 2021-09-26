@@ -2,6 +2,7 @@ import React from "react";
 import { StyledMovieDetailsPage } from "./MovieDetails.style";
 import { BiPlay, BiPlus } from "react-icons/bi";
 import { FiThumbsUp, FiThumbsDown } from "react-icons/fi";
+import { formatRuntime } from "../../utils/formatRuntime";
 
 const MovieDetails = ({ completeMovieDetails }) => {
   const { movieDetails, castDetails } = completeMovieDetails;
@@ -22,16 +23,6 @@ const MovieDetails = ({ completeMovieDetails }) => {
     .splice(0, 4)
     .join(", ");
 
-  const formatRuntime = (runtime) => {
-    let result;
-    if (runtime / 60 > 1) {
-      let hours = runtime / 60;
-      let flooredHours = Math.floor(hours);
-      let minutes = Math.round((hours - flooredHours) * 60);
-      result = `${flooredHours}h ${minutes}min`;
-    } else result = `${runtime} min`;
-    return result;
-  };
   let formattedRuntime = formatRuntime(runtime);
 
   return (

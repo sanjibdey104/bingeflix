@@ -19,3 +19,16 @@ export const removeSelectedMovie = () => {
     type: ActionTypes.REMOVE_SELECTED_MOVIE,
   };
 };
+
+export const setFeaturedMovie = (movie) => {
+  return {
+    type: ActionTypes.SET_FEATURED_MOVIE,
+    payload: movie,
+  };
+};
+
+export const removeFeaturedMovie = () => {
+  return {
+    type: ActionTypes.REMOVE_FEATURED_MOVIE,
+  };
+};

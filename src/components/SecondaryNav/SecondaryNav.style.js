@@ -17,6 +17,7 @@ export const StyledSecondaryNav = styled.ul`
     padding: 0.75rem;
     border-radius: 5rem;
     transform: translateX(-1rem) translateY(-0.5rem);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
 
     li {
       svg {
