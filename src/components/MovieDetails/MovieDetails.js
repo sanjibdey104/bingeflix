@@ -36,43 +36,47 @@ const MovieDetails = ({ completeMovieDetails }) => {
 
   return (
     <StyledMovieDetailsPage>
-      <h2 className="title">{original_title}</h2>
-      <div className="extra">
-        <p className="release-year">{releaseYear}</p>
-        <p className="runtime">{formattedRuntime}</p>
-        <p className="avg-rating">⭐{vote_average}</p>
-      </div>
-      <div className="backdrop-image">
-        <img
-          src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
-          alt={original_title}
-        />
-      </div>
-      <p className="overview">{overview}</p>
-      <div className="controls">
-        <button className="play">
-          <BiPlay />
-          Play
-        </button>
-        <button className="add-to-list">
-          <BiPlus />
-          My List
-        </button>
-        <div className="like-dislike">
-          <button>
-            <FiThumbsUp />
+      <div className="wrapper">
+        <h2 className="title">{original_title}</h2>
+        <div className="extra">
+          <p className="release-year">{releaseYear}</p>
+          <p className="runtime">{formattedRuntime}</p>
+          <p className="avg-rating">⭐{vote_average}</p>
+        </div>
+        <div className="backdrop-image">
+          <img
+            src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
+            alt={original_title}
+          />
+        </div>
+        <p className="overview">{overview}</p>
+        <div className="controls">
+          <button className="play">
+            <BiPlay />
+            Play
           </button>
-          <button>
-            <FiThumbsDown />
+          <button className="add-to-list">
+            <BiPlus />
+            My List
           </button>
+          <div className="like-dislike">
+            <button>
+              <FiThumbsUp />
+            </button>
+            <button>
+              <FiThumbsDown />
+            </button>
+          </div>
+        </div>
+        <div className="genre-cast">
+          <p className="genre-names">
+            <span>Genres:</span> {genreNames}
+          </p>
+          <p className="cast-names">
+            <span>Cast:</span> {cast}
+          </p>
         </div>
       </div>
-      <p className="genre-names">
-        <span>Genres:</span> {genreNames}
-      </p>
-      <p className="cast-names">
-        <span>Cast:</span> {cast}
-      </p>
     </StyledMovieDetailsPage>
   );
 };
