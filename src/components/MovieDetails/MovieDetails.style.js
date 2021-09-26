@@ -4,6 +4,7 @@ export const StyledMovieDetailsPage = styled.section`
   width: 100%;
   margin: 0 auto;
   height: 75vh;
+  padding-top: 7.5rem;
 
   &::after {
     content: "";

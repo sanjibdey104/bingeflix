@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { MovieList } from "../components";
+import { Billboard, MovieList } from "../components";
+import GenreOptions from "../components/GenreOptions/GenreOptions";
 import { setMovies } from "../redux/actions/movieAction";
 
 const MovieListContainer = () => {
@@ -16,6 +17,10 @@ const MovieListContainer = () => {
     const latestListReq = axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=14&with_watch_monetization_types=flatrate`
     );
+    const genresReq = axios.get(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}&language=en-US`
+    );
+
     const fetchMovies = async () => {
       const [trendingList, latestList] = await axios
         .all([weeklyTrendingListReq, latestListReq])
@@ -39,6 +44,7 @@ const MovieListContainer = () => {
 
   return (
     <>
+      <Billboard />
       {movieLists.map((movieList) => (
         <MovieList
           key={movieList.category.split(" ").join()}
