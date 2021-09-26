@@ -8,7 +8,7 @@ export const StyledMovieDetailsPage = styled.section`
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   position: relative;
 
   span {
@@ -53,6 +53,8 @@ export const StyledMovieDetailsPage = styled.section`
     display: flex;
     gap: 1rem;
     align-items: center;
+    font-weight: 500;
+    color: var(--fg-light);
   }
 
   .overview {
@@ -67,11 +69,15 @@ export const StyledMovieDetailsPage = styled.section`
     button {
       border-radius: 0.3rem;
       width: 7rem;
-      font-weight: bolder;
+      font-weight: 600;
       font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        opacity: 0.75;
+      }
 
       svg {
         font-size: 1.5rem;

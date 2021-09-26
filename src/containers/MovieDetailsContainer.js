@@ -11,17 +11,27 @@ import { MovieDetails } from "../components";
 const MovieDetailsContainer = () => {
   const { movieId } = useParams();
   const dispatch = useDispatch();
-  const movieDetails = useSelector((state) => state.movie);
+  const completeMovieDetails = useSelector((state) => state.movie);
   const [isLoading, setIsLoading] = useState(true);
+  console.log(completeMovieDetails);
 
   useEffect(() => {
+    const movieDetailsReq = axios.get(
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
+    );
+
+    const creditDetailsReq = axios.get(
+      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
+    );
     const fetchMovieDetails = async () => {
-      const res = await axios
-        .get(
-          `https://api.themoviedb.org/3/movie/${movieId}?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
-        )
+      const [movieDetails, creditDetails] = await axios
+        .all([movieDetailsReq, creditDetailsReq])
         .catch((err) => console.log(err));
-      dispatch(selectedMovie(res.data));
+      const fullDetails = {
+        movieDetails: movieDetails.data,
+        castDetails: creditDetails.data.cast,
+      };
+      dispatch(selectedMovie(fullDetails));
       setIsLoading(false);
     };
     fetchMovieDetails();
@@ -33,7 +43,7 @@ const MovieDetailsContainer = () => {
       {isLoading ? (
         <p>loading...</p>
       ) : (
-        <MovieDetails movieDetails={movieDetails} />
+        <MovieDetails completeMovieDetails={completeMovieDetails} />
       )}
     </>
   );

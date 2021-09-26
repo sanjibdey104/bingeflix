@@ -3,7 +3,8 @@ import { StyledMovieDetailsPage } from "./MovieDetails.style";
 import { BiPlay, BiPlus } from "react-icons/bi";
 import { FiThumbsUp, FiThumbsDown } from "react-icons/fi";
 
-const MovieDetails = ({ movieDetails }) => {
+const MovieDetails = ({ completeMovieDetails }) => {
+  const { movieDetails, castDetails } = completeMovieDetails;
   const {
     original_title,
     release_date,
@@ -15,7 +16,11 @@ const MovieDetails = ({ movieDetails }) => {
   } = movieDetails;
 
   const releaseYear = release_date.split("-")[0];
-  const genreNames = genres.map((genre) => genre.name).join(",");
+  const genreNames = genres.map((genre) => genre.name).join(", ");
+  const cast = castDetails
+    .map((cast) => cast.original_name)
+    .splice(0, 4)
+    .join(", ");
 
   const formatRuntime = (runtime) => {
     let result;
@@ -64,6 +69,9 @@ const MovieDetails = ({ movieDetails }) => {
       </div>
       <p className="genre-names">
         <span>Genres:</span> {genreNames}
+      </p>
+      <p className="cast-names">
+        <span>Cast:</span> {cast}
       </p>
     </StyledMovieDetailsPage>
   );

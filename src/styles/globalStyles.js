@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         --fg-lightest: #808080;
         --bg-dark: #141414;
         --bg-light: #ffffff;
-        --bg-gray: #808080;
+        --bg-gray: #737373;
     }
     html {
         box-sizing: border-box;
