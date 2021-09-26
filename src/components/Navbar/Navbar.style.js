@@ -24,7 +24,7 @@ export const StyledNavbar = styled.nav`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     margin-left: 2rem;
     .dropdown-toggler {
       display: flex;
