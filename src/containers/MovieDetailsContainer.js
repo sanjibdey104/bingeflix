@@ -13,15 +13,15 @@ const MovieDetailsContainer = () => {
   const dispatch = useDispatch();
   const completeMovieDetails = useSelector((state) => state.movie);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(completeMovieDetails);
 
   useEffect(() => {
+    const api_key = process.env.REACT_APP_TMDB_API_KEY;
     const movieDetailsReq = axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&language=en-US`
     );
 
     const creditDetailsReq = axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=08c42c0181eca72fa61eda374754ce4d&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${api_key}&language=en-US`
     );
     const fetchMovieDetails = async () => {
       const [movieDetails, creditDetails] = await axios

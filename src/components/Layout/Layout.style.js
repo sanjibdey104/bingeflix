@@ -8,4 +8,5 @@ export const StyledLayout = styled.div`
   justify-content: space-between;
   position: relative;
   padding-top: 7.5rem;
+  overflow-x: hidden;
 `;
