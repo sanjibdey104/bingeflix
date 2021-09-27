@@ -1,4 +1,4 @@
-# Bingeflix (🚧 under construction 🚧)
+# Bingeflix
 
 ## A Netflix clone using React, Redux, React Router and TMDB API
 
@@ -6,9 +6,11 @@
 
 ## Features: 
 
-- Currently only fetching movies
-  - User can view list of movies, trending and latest
+- Fetch and render movies and TV shows
+  - User can view list of movies/shows, trending and latest
   - View the movie details
 - ### Todo
-  - Fetch TV shows
-  - Expand the scope to User Authentication
+  - Fetch TV shows [DONE]
+  - Add search functionality
+  - Expand scope to user authentication
+  - Allow users to create lists
