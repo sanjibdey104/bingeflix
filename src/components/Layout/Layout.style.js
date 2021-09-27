@@ -7,5 +7,4 @@ export const StyledLayout = styled.div`
   justify-content: space-between;
   position: relative;
   overflow-x: hidden;
-  padding-bottom: 3rem;
 `;

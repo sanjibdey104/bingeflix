@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ItemListContainer from "./containers/ItemListContainer";
 import ItemDetailsContainer from "./containers/ItemDetailsContainer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             </Route>
             <Route>404 page not found</Route>
           </Switch>
+          <Footer />
         </Router>
       </Layout>
     </div>

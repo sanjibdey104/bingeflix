@@ -6,12 +6,10 @@ const StyledLogo = styled.img`
 
 export const Logo = () => {
   return (
-    <a href="https://fontmeme.com/netflix-font/">
-      <StyledLogo
-        src="https://fontmeme.com/permalink/210923/8940988b646c386bf0ad82efbbd904de.png"
-        alt="netflix-font"
-        border="0"
-      />
-    </a>
+    <StyledLogo
+      src="https://fontmeme.com/permalink/210923/8940988b646c386bf0ad82efbbd904de.png"
+      alt="netflix-font"
+      border="0"
+    />
   );
 };
