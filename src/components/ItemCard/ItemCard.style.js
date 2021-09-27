@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMovieCard = styled.li`
+export const StyledItemCard = styled.li`
   width: 16rem;
   height: 13rem;
   display: flex;
@@ -51,22 +51,4 @@ export const StyledMovieCard = styled.li`
   .release-date {
     padding: 0.5rem;
   }
-
-  /* &:hover {
-    width: 18rem;
-    height: 18rem;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 1), inset 0 0 12px rgba(0, 0, 0, 0.5);
-    overflow: visible;
-
-    .image {
-      height: 10.5rem;
-    }
-
-    .overview {
-      height: 7.5rem;
-      &::after {
-        display: none;
-      }
-    }
-  } */
 `;

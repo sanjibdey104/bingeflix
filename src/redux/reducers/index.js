@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
 import {
-  featuredMovieReducer,
-  movieReducer,
-  selectedMovieReducer,
-} from "./movieReducer";
+  featuredItemReducer,
+  itemReducer,
+  selectedItemReducer,
+} from "./itemReducer";
 
 const reducers = combineReducers({
-  allMovies: movieReducer,
-  movie: selectedMovieReducer,
-  featuredMovie: featuredMovieReducer,
+  allItems: itemReducer,
+  item: selectedItemReducer,
+  featuredItem: featuredItemReducer,
 });
 
 export default reducers;

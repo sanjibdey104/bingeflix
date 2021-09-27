@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledFeaturedMovie = styled.section`
+export const StyledFeaturedItem = styled.section`
   width: 100%;
   margin-bottom: 4rem;
 
@@ -44,7 +44,7 @@ export const StyledFeaturedMovie = styled.section`
       gap: 1rem;
       margin-left: 4rem;
       position: absolute;
-      bottom: 10rem;
+      bottom: 8.5rem;
 
       .title {
         font-size: clamp(1.75rem, 3.5vw, 3.5rem);
@@ -56,9 +56,11 @@ export const StyledFeaturedMovie = styled.section`
         align-items: center;
         gap: 0.75rem;
 
-        button {
+        button,
+        .play {
           border-radius: 0.3rem;
           width: 7rem;
+          height: 2.5rem;
           font-weight: 600;
           font-size: 1rem;
           display: flex;
@@ -73,14 +75,15 @@ export const StyledFeaturedMovie = styled.section`
             font-size: 1.5rem;
             color: inherit;
           }
-
-          &.play {
-            background-color: var(--bg-light);
-          }
           &.add-to-list {
             background-color: var(--bg-gray);
             color: var(--fg-light);
           }
+        }
+
+        .play {
+          background-color: var(--bg-light);
+          color: black;
         }
       }
     }

@@ -1,11 +1,11 @@
 import React from "react";
-import MovieListContainer from "../../containers/MovieListContainer";
+import ItemListContainer from "../../containers/ItemListContainer";
 import { StyledHome } from "./Home.style";
 
 const Home = () => {
   return (
     <StyledHome>
-      <MovieListContainer />
+      <ItemListContainer itemType={"movie"} />
     </StyledHome>
   );
 };

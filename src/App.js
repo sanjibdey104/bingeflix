@@ -7,8 +7,8 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import MovieListContainer from "./containers/MovieListContainer";
-import MovieDetailsContainer from "./containers/MovieDetailsContainer";
+import ItemListContainer from "./containers/ItemListContainer";
+import ItemDetailsContainer from "./containers/ItemDetailsContainer";
 
 function App() {
   return (
@@ -22,11 +22,24 @@ function App() {
               <Redirect to="/home" />
             </Route>
             <Route path="/home" component={Home} />
-            <Route exact path="/movies" component={MovieListContainer} />
-            <Route path="/movies/:movieId" component={MovieDetailsContainer} />
-            <Route path="/tvshows" component={Home} />
-            <Route path="/new&popular" component={MovieListContainer} />
-            <Route path="/mylist" component={Home} />
+            <Route exact path="/movies">
+              <ItemListContainer itemType={"movie"} />
+            </Route>
+            <Route exact path="/movies/:itemId">
+              <ItemDetailsContainer itemType={"movie"} />
+            </Route>
+            <Route path="/tvshows/:itemId">
+              <ItemDetailsContainer itemType={"tv"} />
+            </Route>
+            <Route path="/tvshows">
+              <ItemListContainer itemType={"tv"} />
+            </Route>
+            <Route path="/new&popular">
+              <ItemListContainer itemType={"movie"} />
+            </Route>
+            <Route path="/mylist">
+              <ItemListContainer itemType={"tv"} />
+            </Route>
             <Route>404 page not found</Route>
           </Switch>
         </Router>

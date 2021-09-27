@@ -1,11 +1,14 @@
 import React from "react";
 import { BiPlay, BiPlus } from "react-icons/bi";
-import { StyledFeaturedMovie } from "./FeaturedMovie.style";
+import { StyledFeaturedItem } from "./FeaturedItem.style";
 
-const FeaturedMovie = ({ movieDetails }) => {
-  const { original_title, backdrop_path, overview } = movieDetails;
+const FeaturedItem = ({ itemDetails }) => {
+  const { backdrop_path, overview, homepage } = itemDetails;
+  const original_title = itemDetails?.original_title || itemDetails?.name;
+  console.log(itemDetails);
+
   return (
-    <StyledFeaturedMovie>
+    <StyledFeaturedItem>
       <div className="wrapper">
         <div className="backdrop-image">
           <img
@@ -17,10 +20,15 @@ const FeaturedMovie = ({ movieDetails }) => {
           <h2 className="title">{original_title}</h2>
           <p className="overview">{overview}</p>
           <div className="controls">
-            <button className="play">
+            <a
+              className="play"
+              href={homepage ? homepage : ""}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <BiPlay />
               Play
-            </button>
+            </a>
             <button className="add-to-list">
               <BiPlus />
               My List
@@ -28,8 +36,8 @@ const FeaturedMovie = ({ movieDetails }) => {
           </div>
         </div>
       </div>
-    </StyledFeaturedMovie>
+    </StyledFeaturedItem>
   );
 };
 
-export default FeaturedMovie;
+export default FeaturedItem;
