@@ -7,10 +7,13 @@
 ## Features: 
 
 - Fetch and render movies and TV shows
-  - User can view list of movies/shows, trending and latest
-  - View the movie details
+  - Renders a list of "trending" and "latest release" movies and shows
+  - Renders a featured movie and tv shows on respective route
+  - Users can view the movie/shows details
+  - Fully responsive design
 - ### Todo
-  - Fetch TV shows [DONE]
+  - Better loading indicator
+  - More fluid UI responsiveness
   - Add search functionality
   - Expand scope to user authentication
   - Allow users to create lists
