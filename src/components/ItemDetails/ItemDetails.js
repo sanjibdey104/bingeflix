@@ -80,11 +80,6 @@ const ItemDetails = ({ itemType, completeItemDetails }) => {
             <p className="cast-names">
               <span>Cast:</span> {cast}
             </p>
-            {itemDetails.created_by && (
-              <p className="created-by">
-                <span>Directed by: </span> {itemDetails?.created_by[0].name}
-              </p>
-            )}
           </div>
 
           {itemType === "tv" && (
